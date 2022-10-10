@@ -17,8 +17,8 @@ def archive(string):
 
 
 if __name__ == '__main__':
-    Input_data_file("file_exe5_extract.txt", archive(Output_data_string_file('file_exe5_archive.txt', 'r')), 'w')
-    print(Output_data_string_file('file_exe5_extract.txt','r'))
+    Input_data_file("file_exe4_extract.txt", archive(Output_data_string_file('file_exe4_archive.txt', 'r')), 'w')
+    print(Output_data_string_file('file_exe4_extract.txt', 'r'))
 
 def decoding_text(text2):
     count = ''
@@ -31,5 +31,5 @@ def decoding_text(text2):
             count = ''
     return str_decode
 
-str_decode = decoding_text(Output_data_string_file("file_exe5_extract.txt",'r'))
+str_decode = decoding_text(Output_data_string_file("file_exe4_extract.txt", 'r'))
 print(str_decode)
