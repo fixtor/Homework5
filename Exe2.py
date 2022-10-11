@@ -19,18 +19,18 @@ def user1_move(kandies):
         kandies = kandies - user1_turn
     return kandies
 
-
-def user2_move(kandies):
-
-    user2_turn = int(input("ход игрока 2: "))
-    flag_user2 = 1
-
-    if user2_turn > 28:
-       print('нельзя больше 28!', f'конфет: {kandies}')
-       kandies -= 28
-    else:
-       kandies -= user2_turn
-    return kandies
+# Игорок 2
+# def user2_move(kandies):
+#
+#     user2_turn = int(input("ход игрока 2: "))
+#     flag_user2 = 1
+#
+#     if user2_turn > 28:
+#        print('нельзя больше 28!', f'конфет: {kandies}')
+#        kandies -= 28
+#     else:
+#        kandies -= user2_turn
+#     return kandies
 
 def bot_game(kandies):
 
@@ -59,17 +59,17 @@ while game_kandies >= 28:
 
         print(game_kandies)
         Player1 = 1
-        Player2 = 0
+        #Player2 = 0
         bot = 0
 
-        game_kandies = user2_move(game_kandies)
-        if game_kandies < 0:
-            game_kandies = 0
-
-        print(game_kandies)
-        Player1 = 0
-        Player2 = 1
-        bot = 0
+        # game_kandies = user2_move(game_kandies)
+        # if game_kandies < 0:
+        #     game_kandies = 0
+        #
+        # print(game_kandies)
+        # Player1 = 0
+        # #Player2 = 1
+        # bot = 0
 
         game_kandies = bot_game(game_kandies)
         if game_kandies < 0:
@@ -78,7 +78,7 @@ while game_kandies >= 28:
         print(game_kandies)
 
         Player1 = 0
-        Player2 = 0
+        # Player2 = 0
         bot = 1
 
 
@@ -86,5 +86,5 @@ if bot == 1:
     print('Победил игрок bot')
 elif Player1 == 1:
     print(f'Победил игрок 1')
-elif Player2 == 1:
-    print(f'Победил игрок 2')
+# elif Player2 == 1:
+#     print(f'Победил игрок 2')
