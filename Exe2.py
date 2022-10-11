@@ -46,7 +46,7 @@ def bot_game(kandies):
 
         return kandies
 
-game_kandies = 56
+game_kandies = 2021
 Player1 = 0
 Player2 = 0
 bot = 0
